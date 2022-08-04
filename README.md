@@ -71,7 +71,7 @@ Simply change in the 5th cell of ```abp_imputer.ipynb```, the ```train_or_test =
 ## TEAM
 
 SIMON LEE<sup>1</sup>, Ákos Rudas<sup>2</sup>, & Jeffrey N. Chiang<sup>2</sup><br />
-1 BIG Summer Program, Institute for Quantitative and Computational Biosciences, UCLA<br />
+1 Bruins In Genomics Summer Program, Institute for Quantitative and Computational Biosciences, UCLA<br />
 2 Department of Computational Medicine, University of California, Los Angeles, CA, USA
 
 
