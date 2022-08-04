@@ -1,7 +1,9 @@
 # ABPImputation with EHR Medication Data
 
 ABPImputation is a package for imputing the arterial blood pressure (ABP) waveform using non-invasive physiological waveforms (photoplethysmogram, or PPG, and electrocardiogram, or ECG/EKG). 
-For detailed information, please see [our paper](https://www.nature.com/articles/s41598-021-94913-y).  
+For more detailed information on the first, please see [our paper](https://www.nature.com/articles/s41598-021-94913-y).  <br /><br />
+
+Now we leverage vasopressor drugs and see whether we can get a better prediction than before. Through leveraging medication data in the EHR we present to you our current model.
 
 <p align="center">
   <img src="https://github.com/brianhill11/media/blob/master/abpimputation/ABPImputation.gif" alt="imputation-gif">
