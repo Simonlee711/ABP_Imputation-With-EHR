@@ -10,20 +10,6 @@ For detailed information, please see [our paper](https://www.nature.com/articles
 
 ## Installation
 
-### Using pip (TODO)
-Install the package using pip:
-```
-pip install abpimputation
-```
-
-### From Github repo 
-Clone the repo and install the required packages:
-```
-git clone https://github.com/brianhill11/ABPImputation.git
-cd ABPImputation
-pip install -r requirements.txt
-```
-
 ## Data format 
 
 We assume that the input waveform data has been sampled at 100 Hz. 
@@ -60,40 +46,15 @@ requires 3 steps:
 2. preprocessing the waveform data to add additional features
 3. load the pre-trained model and generated the imputed waveform(s)
 
-Here is an example code segment:
+An example code segment can be found in:
 
-```python
-from abpimputation.ABPImputer import ABPImputer
-from abpimputation.preprocessing.preprocess import preprocess
-
-# read in the data from file
-data = pd.read_csv(f, index_col=0)
-
-# preprocess the data 
-preprocessed_data = preprocess(data)
-
-# split into input/target data
-y_true = preprocessed_data["art"]
-X = preprocessed_data.iloc[:, :-1]
-# add in pseudo-time axis 
-X = np.expand_dims(X, axis=1)
-
-# instantiate ABPImputer
-abp = ABPImputer()
-
-# generate predicted ABP waveform
-y_pred = abp.predict(X)
+```
+abp_imputer.ipynb
 ```
 
 ## Calibrating the model using additional data
 
 ## Training from scratch
 
-## Citation 
+Simply change in the 5th cell of ```abp_imputer.ipynb```, the ```train_or_test = 'train'``` variable
 
-If you use the ABPImputation package in your work, please cite
-```
-Hill, B.L., Rakocz, N., Rudas, Á. et al. Imputation of the continuous arterial line 
-blood pressure waveform from non-invasive measurements using deep learning. 
-Sci Rep 11, 15755 (2021). https://doi.org/10.1038/s41598-021-94913-y
-```
